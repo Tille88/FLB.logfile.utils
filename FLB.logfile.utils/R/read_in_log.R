@@ -19,7 +19,7 @@ read_in_log = function(path){
                       stringsAsFactors=FALSE)
   log_df$tenth_of_sec = sapply(log_df[,1], function(x) { substr(x, nchar(x), nchar(x))})
   log_df[,1] = as.POSIXct(log_df[,1])
-  log_df[,4] = NULL
+  #log_df[,4] = NULL
   names(log_df) <- c('posix_time', 'category', 'variables', 'tenth_of_second')
   log_df = log_df %>% dplyr::mutate(seconds = posix_time - log_df$posix_time[1])
   log_df$seconds = log_df$seconds + as.numeric(log_df$tenth_of_second) * 10^-2

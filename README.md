@@ -6,6 +6,12 @@ Reads in logs to processable format from mavlogdump.py
 devtools::install_github("Tille88/FLB.logfile.utils/FLB.logfile.utils")
 ```
 
+## Get logfile from binary example
+```sh
+$ mavlogdump.py logfile.tlog > outputfile.txt
+```
+
+
 ## Example code of usage
 ```r
 # Example of usage
